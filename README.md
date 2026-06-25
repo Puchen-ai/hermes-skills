@@ -41,7 +41,8 @@ hermes-skills/
 ├── social-media/                   # 社交平台相关
 │   └── weibo-monitoring/
 ├── software-development/           # 软件开发辅助
-│   └── chinese-news-scraper/
+│   ├── chinese-news-scraper/
+│   └── agent-harness-design/
 ├── alinux3-python-env/             # 环境速查（root）
 ├── cron-web-fetch-fallback/        # cron 抓网页降级（root）
 ├── karpathy-guidelines/            # LLM 编码准则（root）
@@ -61,7 +62,7 @@ hermes-skills/
 
 ---
 
-## Skill 总览（9 个）
+## Skill 总览（10 个）
 
 按目录分组，每个 skill 给出**触发场景 + 关键能力**。
 
@@ -116,6 +117,18 @@ hermes-skills/
   - SQLite / PostgreSQL 存储适配
   - 礼貌爬取（robots.txt、间隔、退避）
 - **不适用**：纯英文站点、需要 JS 渲染或过 CAPTCHA 的站点
+
+#### [`agent-harness-design`](./software-development/agent-harness-design/SKILL.md)
+
+- **用途**：造 coding agent / 多 agent 系统的设计模式速查
+- **触发信号**：用户要做"coding agent"、"LLM agent 框架"、"Claude Code 类产品"、"subagent 设计"、"agent 任务系统"、"上下文压缩"、"MCP 集成"、"多 agent 协作"
+- **关键能力**：
+  - 20 个 harness 机制速查（s01-s20，从 shareAI-lab/learn-claude-code 提炼）
+  - 15 条核心设计原则
+  - 9 套必装组合（按需求场景分）
+  - 可复用代码模板（dispatch map / hooks / 4 层压缩 / task DAG / MessageBus）
+- **核心理念**："Agency 来自模型, Harness 让 agency 落地" — 别用工作流图模拟智能
+- **不适用**：单轮对话产品、纯 prompt 工程、LLM API 简单封装
 
 ### alinux3-python-env
 
